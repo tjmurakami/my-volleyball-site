@@ -1,5 +1,11 @@
 import Link from "next/link";
-
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardContent,
+  CardDescription
+} from "@/components/ui/card";
 
 interface Team {
   slug: string;
@@ -18,16 +24,20 @@ interface Team {
 export default function TeamCard({ team }: { team: Team }) {
   return (
     <Link href={`/teams/${team.slug}`}>
-      <div className="border rounded-xl p-6 hover:shadow-lg transition">
-        <h3 className="text-xl font-semibold">
-          {team.name}
-        </h3>
+      <Card className="hover:shadow-lg transition cursor-pointer">
+        <CardHeader>
+          <CardTitle>{team.name}</CardTitle>
+          <CardDescription>{team.location}</CardDescription>
+        </CardHeader>
 
-        <p className="text-gray-500">
-          {team.location}
-        </p>
-      </div>
+        <CardContent>
+          <p className="text-sm text-muted-foreground">
+            View roster and schedule
+          </p>
+        </CardContent>
+      </Card>
     </Link>
   );
 }
+
 

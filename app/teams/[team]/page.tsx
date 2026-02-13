@@ -17,7 +17,6 @@ export default async function TeamPage({ params }: TeamPageProps) {
   if (!team) {
     return (
       <main>
-        <Navbar />
         <div className="p-10">
           <h1>Team not found</h1>
         </div>
@@ -27,7 +26,6 @@ export default async function TeamPage({ params }: TeamPageProps) {
 
   return (
     <main>
-      <Navbar />
 
       <section className="p-10">
         <h1 className="text-4xl font-bold">
