@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import TeamCard from "@/components/TeamCard";
 import { teams } from "@/lib/data";
 
@@ -6,7 +5,7 @@ export default function TeamsPage() {
   return (
     <main>
 
-      <section className="p-10">
+      <section className="p-6 md:p-10">
         <h1 className="text-4xl font-bold mb-8">
           NVA Teams
         </h1>

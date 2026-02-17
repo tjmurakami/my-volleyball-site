@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import { teams } from "@/lib/data";
 
 type TeamPageProps = {
@@ -17,7 +16,7 @@ export default async function TeamPage({ params }: TeamPageProps) {
   if (!team) {
     return (
       <main>
-        <div className="p-10">
+        <div className="p-6 md:p-10">
           <h1>Team not found</h1>
         </div>
       </main>
@@ -32,7 +31,7 @@ export default async function TeamPage({ params }: TeamPageProps) {
           {team.name}
         </h1>
 
-        <p className="text-gray-500 mb-10">
+        <p className="mb-10 text-muted-foreground">
           {team.location}
         </p>
 
@@ -44,7 +43,7 @@ export default async function TeamPage({ params }: TeamPageProps) {
           {team.roster.map(player => (
             <div
               key={player.name}
-              className="border p-4 rounded-lg"
+              className="rounded-lg border border-border/70 bg-card/50 p-4"
             >
               {player.name} – {player.position}
             </div>
@@ -59,7 +58,7 @@ export default async function TeamPage({ params }: TeamPageProps) {
           {team.schedule.map((game, index) => (
             <div
               key={index}
-              className="border p-4 rounded-lg"
+              className="rounded-lg border border-border/70 bg-card/50 p-4"
             >
               vs {game.opponent} – {game.date}
             </div>

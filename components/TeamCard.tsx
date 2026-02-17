@@ -24,14 +24,14 @@ interface Team {
 export default function TeamCard({ team }: { team: Team }) {
   return (
     <Link href={`/teams/${team.slug}`}>
-      <Card className="hover:shadow-lg transition cursor-pointer">
+      <Card className="cursor-pointer border border-border/80 bg-card/90 backdrop-blur-sm transition hover:-translate-y-1 hover:border-primary/70 hover:shadow-xl hover:shadow-primary/20">
         <CardHeader>
-          <CardTitle>{team.name}</CardTitle>
+          <CardTitle className="text-xl">{team.name}</CardTitle>
           <CardDescription>{team.location}</CardDescription>
         </CardHeader>
 
         <CardContent>
-          <p className="text-sm text-muted-foreground">
+          <p className="text-sm text-muted-foreground/90">
             View roster and schedule
           </p>
         </CardContent>
