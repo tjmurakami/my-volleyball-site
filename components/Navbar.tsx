@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const navItems = [
@@ -10,18 +11,16 @@ export default function Navbar() {
     <nav className="sticky top-0 z-20 mb-8 border-b border-border/70 bg-background/85 backdrop-blur">
       <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 md:px-6">
         <Link href="/" className="flex items-center gap-3">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary font-black text-primary-foreground shadow-lg shadow-primary/30">
-            NVA
-          </span>
+          <Image src="/nva-logo.svg" alt="NVA logo" width={44} height={44} className="h-11 w-11" priority />
           <span className="text-lg font-semibold tracking-wide">National Volleyball Association</span>
         </Link>
 
-        <div className="flex items-center gap-2 rounded-full border border-border/60 bg-card/60 p-1 text-sm font-medium text-muted-foreground">
+        <div className="flex items-center gap-5 rounded-full border border-border/60 bg-card/60 px-2 py-1.5 text-sm font-medium text-muted-foreground">
           {navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-full px-4 py-1.5 transition hover:bg-primary/15 hover:text-foreground"
+              className="rounded-full px-6 py-2.5 transition hover:bg-primary/15 hover:text-foreground"
             >
               {item.label}
             </Link>

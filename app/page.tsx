@@ -16,12 +16,12 @@ export default function Home() {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+        <div className="grid grid-cols-1 gap-5 m:grid-cols-2">
           {teams.map((team) => (
             <Link
               key={team.slug}
               href={`/teams/${team.slug}`}
-              className="rounded-xl border border-border/70 bg-background/30 p-7 text-center text-xl font-semibold transition hover:-translate-y-1 hover:border-primary/60 hover:bg-primary/10"
+              className="rounded-xl border border-border/70 bg-background/30 p-8 text-center text-2xl font-bold transition hover:-translate-y-1 hover:border-primary/60 hover:bg-primary/10"
             >
               {team.name}
             </Link>
