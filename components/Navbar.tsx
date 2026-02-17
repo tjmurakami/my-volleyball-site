@@ -1,15 +1,33 @@
 import Link from "next/link";
 
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/teams", label: "Teams" },
+];
+
 export default function Navbar() {
   return (
-    <nav className="sticky top-0 z-20 mb-6 flex items-center justify-between border-b border-border/70 bg-background/70 p-6 backdrop-blur">
-      <h1 className="text-xl font-bold">NVA League</h1>
+    <nav className="sticky top-0 z-20 mb-8 border-b border-border/70 bg-background/85 backdrop-blur">
+      <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-4 md:px-6">
+        <Link href="/" className="flex items-center gap-3">
+          <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary font-black text-primary-foreground shadow-lg shadow-primary/30">
+            NVA
+          </span>
+          <span className="text-lg font-semibold tracking-wide">National Volleyball Association</span>
+        </Link>
 
-      <div className="flex gap-6 text-sm font-medium text-muted-foreground">
-        <Link href="/">Home</Link>
-        <Link href="/teams">Teams</Link>
+        <div className="flex items-center gap-2 rounded-full border border-border/60 bg-card/60 p-1 text-sm font-medium text-muted-foreground">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="rounded-full px-4 py-1.5 transition hover:bg-primary/15 hover:text-foreground"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </div>
       </div>
     </nav>
   );
 }
-

@@ -16,9 +16,15 @@ export const teams = [
       { name: "Gavin Gibson", position: "Middle Blocker" }
     ],
     schedule: [
-      { opponent: "Las Vegas Blaze", date: "2026-04-12" },
-      { opponent: "New York City Cyclones", date: "2026-04-15" },
-      { opponent: "Houston Dragons", date: "2026-04-18" }
+      { opponent: "Las Vegas Blaze", date: "2026-04-01" },
+      { opponent: "New York City Cyclones", date: "2026-04-04" },
+      { opponent: "Houston Dragons", date: "2026-04-07" },
+      { opponent: "Las Vegas Blaze", date: "2026-04-10" },
+      { opponent: "New York City Cyclones", date: "2026-04-13" },
+      { opponent: "Houston Dragons", date: "2026-04-16" },
+      { opponent: "Las Vegas Blaze", date: "2026-04-19" },
+      { opponent: "New York City Cyclones", date: "2026-04-22" },
+      { opponent: "Houston Dragons", date: "2026-04-25" }
     ]
   },
  // Las Vegas Blaze
@@ -36,9 +42,15 @@ export const teams = [
       { name: "Oliver Ogden", position: "Middle Blocker" }
     ],
     schedule: [
-      { opponent: "Los Angeles Aces", date: "2026-04-12" },
-      { opponent: "Houston Dragons", date: "2026-04-15" },
-      { opponent: "New York City Cyclones", date: "2026-04-18" }
+      { opponent: "Los Angeles Aces", date: "2026-04-01" },
+      { opponent: "Houston Dragons", date: "2026-04-04" },
+      { opponent: "New York City Cyclones", date: "2026-04-07" },
+      { opponent: "Los Angeles Aces", date: "2026-04-10" },
+      { opponent: "Houston Dragons", date: "2026-04-13" },
+      { opponent: "New York City Cyclones", date: "2026-04-16" },
+      { opponent: "Los Angeles Aces", date: "2026-04-19" },
+      { opponent: "Houston Dragons", date: "2026-04-22" },
+      { opponent: "New York City Cyclones", date: "2026-04-25" }
     ]
   },
   // New York City Cyclones
@@ -56,9 +68,15 @@ export const teams = [
       { name: "Andrew Anderson", position: "Middle Blocker" }
     ],
     schedule: [
-      { opponent: "Houston Dragons", date: "2026-04-12" },
-      { opponent: "Los Angeles Aces", date: "2026-04-15" },
-      { opponent: "Las Vegas Blaze", date: "2026-04-18" }
+      { opponent: "Houston Dragons", date: "2026-04-01" },
+      { opponent: "Los Angeles Aces", date: "2026-04-04" },
+      { opponent: "Las Vegas Blaze", date: "2026-04-07" },
+      { opponent: "Houston Dragons", date: "2026-04-10" },
+      { opponent: "Los Angeles Aces", date: "2026-04-13" },
+      { opponent: "Las Vegas Blaze", date: "2026-04-16" },
+      { opponent: "Houston Dragons", date: "2026-04-19" },
+      { opponent: "Los Angeles Aces", date: "2026-04-22" },
+      { opponent: "Las Vegas Blaze", date: "2026-04-25" }
     ]
   },
   // Houston Dragons
@@ -76,9 +94,15 @@ export const teams = [
       { name: "Kevin Kelly", position: "Middle Blocker" }
     ],
     schedule: [
-      { opponent: "New York City Cyclones", date: "2026-04-12" },
-      { opponent: "Las Vegas Blaze", date: "2026-04-15" },
-      { opponent: "Los Angeles Aces", date: "2026-04-18" }
+      { opponent: "New York City Cyclones", date: "2026-04-01" },
+      { opponent: "Las Vegas Blaze", date: "2026-04-04" },
+      { opponent: "Los Angeles Aces", date: "2026-04-07" },
+      { opponent: "New York City Cyclones", date: "2026-04-10" },
+      { opponent: "Las Vegas Blaze", date: "2026-04-13" },
+      { opponent: "Los Angeles Aces", date: "2026-04-16" },
+      { opponent: "New York City Cyclones", date: "2026-04-19" },
+      { opponent: "Las Vegas Blaze", date: "2026-04-22" },
+      { opponent: "Los Angeles Aces", date: "2026-04-25" }
     ]
   },
 ];
