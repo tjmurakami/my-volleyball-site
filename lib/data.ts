@@ -1,10 +1,9 @@
-// lib/data.ts
 export const teams = [
-  // These are fictional teams and players
   // Los Angeles Aces
   {
     slug: "los-angeles-aces",
     name: "Los Angeles Aces",
+    logo: "/team-logos/los-angeles-aces.svg",
     location: "Los Angeles, CA",
     roster: [
       { name: "Adam Allison", position: "Outside Hitter" },
@@ -31,6 +30,7 @@ export const teams = [
   {
     slug: "las-vegas-blaze",
     name: "Las Vegas Blaze",
+    logo: "/team-logos/las-vegas-blaze.svg",
     location: "Las Vegas, NV",
     roster: [
       { name: "Harry Harrison", position: "Outside Hitter" },
@@ -57,6 +57,7 @@ export const teams = [
   {
     slug: "new-york-city-cyclones",
     name: "New York City Cyclones",
+    logo: "/team-logos/new-york-city-cyclones.svg",
     location: "New York City, NY",
     roster: [
       { name: "Paul Pearson", position: "Outside Hitter" },
@@ -83,6 +84,7 @@ export const teams = [
   {
     slug: "houston-dragons",
     name: "Houston Dragons",
+    logo: "/team-logos/houston-dragons.svg",
     location: "Houston, TX",
     roster: [
       { name: "Blake Butler", position: "Outside Hitter" },
@@ -106,4 +108,3 @@ export const teams = [
     ]
   },
 ];
-

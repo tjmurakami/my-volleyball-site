@@ -11,9 +11,21 @@ type CalendarProps = {
 
 const weekDays = ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"];
 
+function dateKey(date: Date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function keyToDate(key: string) {
+  const [year, month, day] = key.split("-").map(Number);
+  return new Date(year, month - 1, day);
+}
+
 export function Calendar({ highlightedDates, selected, onSelect, className }: CalendarProps) {
-  const uniqueDates = [...new Set(highlightedDates.map((date) => date.toISOString().slice(0, 10)))].sort();
-  const monthDate = uniqueDates[0] ? new Date(`${uniqueDates[0]}T00:00:00`) : new Date();
+  const uniqueDates = [...new Set(highlightedDates.map((date) => dateKey(date)))].sort();
+  const monthDate = uniqueDates[0] ? keyToDate(uniqueDates[0]) : new Date();
 
   const month = monthDate.getMonth();
   const year = monthDate.getFullYear();
@@ -41,9 +53,9 @@ export function Calendar({ highlightedDates, selected, onSelect, className }: Ca
         {dayCells.map((date, idx) => {
           if (!date) return <div key={`empty-${idx}`} className="h-14" />;
 
-          const key = date.toISOString().slice(0, 10);
+          const key = dateKey(date);
           const isHighlighted = uniqueDates.includes(key);
-          const isSelected = selected?.toISOString().slice(0, 10) === key;
+          const isSelected = selected ? dateKey(selected) === key : false;
 
           return (
             <button

@@ -5,12 +5,24 @@ import { Calendar } from "@/components/ui/calendar";
 import { teams } from "@/lib/data";
 
 const games = teams.flatMap((team) =>
-  team.schedule.map((game) => ({
-    ...game,
-    team: team.name,
-    dateObj: new Date(`${game.date}T00:00:00`),
-  }))
+  team.schedule.map((game) => {
+    const [year, month, day] = game.date.split("-").map(Number);
+
+    return {
+      ...game,
+      team: team.name,
+      dateKey: game.date,
+      dateObj: new Date(year, month - 1, day),
+    };
+  })
 );
+
+function dateKey(date: Date) {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
 
 export default function ScheduleCalendar() {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(games[0]?.dateObj);
@@ -19,16 +31,15 @@ export default function ScheduleCalendar() {
     const map = new Map<string, typeof games>();
 
     for (const game of games) {
-      const key = game.dateObj.toISOString().slice(0, 10);
-      const existing = map.get(key) ?? [];
+      const existing = map.get(game.dateKey) ?? [];
       existing.push(game);
-      map.set(key, existing);
+      map.set(game.dateKey, existing);
     }
 
     return map;
   }, []);
 
-  const selectedKey = selectedDate?.toISOString().slice(0, 10);
+  const selectedKey = selectedDate ? dateKey(selectedDate) : undefined;
   const gamesForSelectedDate = selectedKey ? scheduleByDate.get(selectedKey) ?? [] : [];
 
   return (

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { teams } from "@/lib/data";
 
 type TeamPageProps = {
@@ -25,17 +26,15 @@ export default async function TeamPage({ params }: TeamPageProps) {
 
   return (
     <main>
-
       <section className="p-10">
-        <h1 className="text-4xl font-bold">
-          {team.name}
-        </h1>
+        <div className="mb-8 flex items-center gap-5">
+          <Image src={team.logo} alt={`${team.name} logo`} width={96} height={96} className="h-20 w-20" />
+          <h1 className="text-5xl font-extrabold md:text-6xl">
+            {team.name}
+          </h1>
+        </div>
 
-        <p className="mb-10 text-muted-foreground">
-          {team.location}
-        </p>
-
-        <h2 className="text-2xl font-semibold mb-4">
+        <h2 className="mb-4 text-2xl font-semibold">
           Roster
         </h2>
 
@@ -50,7 +49,7 @@ export default async function TeamPage({ params }: TeamPageProps) {
           ))}
         </div>
 
-        <h2 className="text-2xl font-semibold mb-4">
+        <h2 className="mb-4 text-2xl font-semibold">
           Schedule
         </h2>
 
