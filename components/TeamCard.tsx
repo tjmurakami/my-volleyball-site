@@ -23,7 +23,6 @@ export default function TeamCard({ team }: { team: Team }) {
           />
           <div>
             <CardTitle className="text-xl">{team.name}</CardTitle>
-            <CardDescription>{team.location}</CardDescription>
           </div>
         </CardHeader>
 

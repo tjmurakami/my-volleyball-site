@@ -58,6 +58,13 @@
   }
 }
 
-
+.calendar-day[data-highlighted="true"] {
+  background-color: #34d399;
+  border-color: #10b981;
+  color: #052e16;
+}
+.calendar-day[data-highlighted="true"]:hover {
+  background-color: #6ee7b7;
+}
 
 

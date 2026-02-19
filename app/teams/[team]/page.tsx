@@ -27,7 +27,7 @@ export default async function TeamPage({ params }: TeamPageProps) {
   return (
     <main>
       <section className="p-10">
-        <div className="mb-8 flex items-center gap-5">
+        <div className="mb-8 flex items-center gap-6 md:gap-8">
           <Image src={team.logo} alt={`${team.name} logo`} width={96} height={96} className="h-20 w-20" />
           <h1 className="text-5xl font-extrabold md:text-6xl">
             {team.name}

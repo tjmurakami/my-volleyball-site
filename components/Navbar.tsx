@@ -15,7 +15,7 @@ export default function Navbar() {
           <span className="text-lg font-semibold tracking-wide">National Volleyball Association</span>
         </Link>
 
-        <div className="flex items-center gap-3 rounded-full border border-border/60 bg-card/60 px-2 py-1.5 text-sm font-medium text-muted-foreground">
+        <div className="flex items-center gap-4 rounded-full border border-border/60 bg-card/60 px-3 py-1.5 text-sm font-medium text-muted-foreground md:gap-6 md:px-5">
           {navItems.map((item) => (
             <Link
               key={item.href}

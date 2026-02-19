@@ -22,7 +22,9 @@ export default function Home() {
             <Link
               key={team.slug}
               href={`/teams/${team.slug}`}
-              className="flex items-center gap-4 rounded-xl border border-border/70 bg-background/30 p-6 transition hover:-translate-y-1 hover:border-primary/60 hover:bg-primary/10"
+              className="flex items-center gap-5 rounded-xl border border-border/70
+         bg-background/30 p-6 transition hover:-translate-y-1 hover:border-primary/60 hover
+        :bg-primary/10 md:gap-7"
             >
               <Image
                 src={team.logo}
