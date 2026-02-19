@@ -1,4 +1,5 @@
-export const teams = [
+import type { Team } from "@/lib/types";
+export const teams: Team[] = [
   // Los Angeles Aces
   {
     slug: "los-angeles-aces",

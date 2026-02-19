@@ -1,14 +1,18 @@
-import Image from "next/image";
+export type TeamPlayer = {
+  name: string;
+  position: string;
+};
 
-export default function Home() {
-  return (
-    <main className="p-10">
-      <h1 className="text-4xl font-bold">
-        Trevor's Learning Site
-      </h1>
-      <p className="mt-4">
-        Built with Next.js + Tailwind
-      </p>
-    </main>
-  );
-}
+export type TeamGame = {
+  opponent: string;
+  date: string;
+};
+
+export type Team = {
+  slug: string;
+  name: string;
+  logo: string;
+  location: string;
+  roster: TeamPlayer[];
+  schedule: TeamGame[];
+};

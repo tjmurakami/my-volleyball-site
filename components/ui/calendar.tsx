@@ -43,7 +43,7 @@ export function Calendar({ highlightedDates, selected, onSelect, className }: Ca
         {monthDate.toLocaleDateString("en-US", { month: "long", year: "numeric" })}
       </p>
 
-      <div className="mb-3 grid grid-cols-7 gap-2 text-center text-sm text-muted-foreground">
+        <div className="mb-3 grid grid-cols-7 gap-2 text-center text-sm text-muted-foreground">
         {weekDays.map((day) => (
           <div key={day}>{day}</div>
         ))}
@@ -65,13 +65,13 @@ export function Calendar({ highlightedDates, selected, onSelect, className }: Ca
               className={cn(
                 "relative h-14 rounded-lg border text-base transition",
                 isHighlighted
-                  ? "border-green-300 bg-green-600 font-bold text-white shadow-md shadow-green-900/40"
+                  ? "border-emerald-300 bg-emerald-500 font-bold text-emerald-950 shadow-md shadow-emerald-900/40"
                   : "border-border/60 bg-background/20 text-muted-foreground",
                 isSelected && "ring-2 ring-primary ring-offset-2 ring-offset-background"
               )}
             >
               {date.getDate()}
-              {isHighlighted && <span className="absolute right-1.5 top-1.5 h-2 w-2 rounded-full bg-white/90" />}
+              {isHighlighted && <span className="absolute right-1.5 top-1.5 h-2 w-2 rounded-full bg-emerald-900" />}
             </button>
           );
         })}
