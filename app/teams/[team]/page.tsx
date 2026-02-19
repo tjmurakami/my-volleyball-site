@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { teams } from "@/lib/data";
 
 type TeamPageProps = {
@@ -38,14 +39,16 @@ export default async function TeamPage({ params }: TeamPageProps) {
           Roster
         </h2>
 
-        <div className="mb-10 space-y-2">
-          {team.roster.map(player => (
-            <div
-              key={player.name}
-              className="rounded-lg border border-border/70 bg-card/50 p-4"
+        <div className="mb-10 grid gap-3 sm:grid-cols-2">
+          {team.roster.map((player) => (
+            <Link
+              key={player.slug}
+              href={`/teams/${team.slug}/players/${player.slug}`}
+              className="rounded-lg border border-border/70 bg-card/50 p-4 transition hover:-translate-y-0.5 hover:border-primary/70 hover:bg-primary/10"
             >
-              {player.name} – {player.position}
-            </div>
+              <p className="text-base font-semibold">{player.name}</p>
+              <p className="text-sm text-muted-foreground">{player.position}</p>
+            </Link>
           ))}
         </div>
 

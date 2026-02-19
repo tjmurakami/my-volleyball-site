@@ -43,7 +43,8 @@ export default function ScheduleCalendar() {
   const gamesForSelectedDate = selectedKey ? scheduleByDate.get(selectedKey) ?? [] : [];
 
   return (
-    <div className="grid gap-6 rounded-2xl border border-border/70 bg-card/50 p-5 shadow-lg shadow-black/15 md:grid-cols-[420px,1fr]">      <Calendar
+    <div className="grid gap-6 rounded-2xl border border-border/70 bg-card/50 p-5shadow-lg shadow-black/15 md:grid-cols-[280px,1fr]">
+    <Calendar
         highlightedDates={games.map((game) => game.dateObj)}
         selected={selectedDate}
         onSelect={setSelectedDate}

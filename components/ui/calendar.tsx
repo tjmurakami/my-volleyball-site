@@ -80,8 +80,8 @@ export function Calendar({ highlightedDates, selected, onSelect, className }: Ca
   });
 
   return (
-    <div className={cn("rounded-xl border border-border/60 bg-card/60 p-5", className)}>
-      <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
+    <div className={cn("rounded-xl border border-border/60 bg-card/60 p-3", className)}>
+      <div className="mb-2 flex flex-wrap items-center justify-between gap-3">
         <div className="flex items-center gap-2">
           <button
             type="button"
@@ -136,19 +136,19 @@ export function Calendar({ highlightedDates, selected, onSelect, className }: Ca
         </div>
       </div>
 
-      <p className="mb-3 text-center text-base font-semibold">
+      <p className="mb-2 text-center text-sm font-semibold">
         {monthLabels[month]} {year}
       </p>
 
-      <div className="mb-3 grid grid-cols-7 gap-2 text-center text-sm text-muted-foreground">
+      <div className="mb-2 grid grid-cols-7 gap-2 text-center text-sm text-muted-foreground">
         {weekDays.map((day) => (
           <div key={day}>{day}</div>
         ))}
       </div>
 
-      <div className="grid grid-cols-7 gap-2">
+      <div className="grid grid-cols-7 auto-rows-[32px] gap-2">
         {dayCells.map((date, idx) => {
-          if (!date) return <div key={`empty-${idx}`} className="h-14" />;
+          if (!date) return <div key={`empty-${idx}`} className="h-full w-full" />;
 
           const key = dateKey(date);
           const isHighlighted = highlightedSet.has(key);
@@ -169,15 +169,18 @@ export function Calendar({ highlightedDates, selected, onSelect, className }: Ca
               data-highlighted={isHighlighted ? "true" : "false"}
               style={highlightStyle}
               className={cn(
-                "calendar-day relative h-14 rounded-lg border text-base transition",
+                "calendar-day relative flex h-full w-full items-center justify-center rounded border text-sm font-medium leading-none transition",
                 isHighlighted
-                  ? "font-bold shadow-md shadow-emerald-900/35"
+                  ? "font-bold shadow-sm shadow-emerald-900/35"
                   : "border-border/60 bg-background/20 text-muted-foreground",
-                isSelected && "ring-2 ring-primary ring-offset-2 ring-offset-background"
+                isSelected &&
+                  "z-10 ring-1 ring-white/90 ring-offset-1 ring-offset-background outline outline-1 outline-white/70 outline-offset-1"
               )}
             >
               {date.getDate()}
-              {isHighlighted && <span className="absolute right-1.5 top-1.5 h-2 w-2 rounded-full bg-emerald-950" />}
+              {isHighlighted && (
+                <span className="absolute right-0.5 top-0.5 h-1.5 w-1.5 rounded-full bg-emerald-950" />
+              )}
             </button>
           );
         })}
