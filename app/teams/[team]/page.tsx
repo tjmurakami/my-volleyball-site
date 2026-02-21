@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { teams } from "@/lib/data";
+import { formatLeagueDate } from "@/lib/standings";
 
 type TeamPageProps = {
   params: Promise<{
@@ -62,7 +63,21 @@ export default async function TeamPage({ params }: TeamPageProps) {
               key={index}
               className="rounded-lg border border-border/70 bg-card/50 p-4"
             >
-              vs {game.opponent} – {game.date}
+              <p className="text-sm text-muted-foreground">{formatLeagueDate(game.date)}</p>
+              {game.result ? (
+                <p
+                  className={`mt-1 text-sm font-semibold ${
+                    game.result.setsFor > game.result.setsAgainst
+                      ? "text-emerald-300"
+                      : "text-rose-300"
+                  }`}
+                >
+                  {game.result.setsFor > game.result.setsAgainst ? "W" : "L"} {game.result.setsFor}-
+                  {game.result.setsAgainst} vs {game.opponent}
+                </p>
+              ) : (
+                <p className="mt-1 text-sm font-medium">vs {game.opponent}</p>
+              )}
             </div>
           ))}
         </div>

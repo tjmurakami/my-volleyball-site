@@ -29,7 +29,7 @@ export const teams: Team[] = [
         wingspan: "77 in",
         hometown: "Santa Monica, CA",
         bio: "Crafty scorer who mixes sharp angles with a reliable jump float serve.",
-        image: "/players/brian-baker.png"
+        image: "/players/placeholder.svg"
       },
       {
         slug: "carl-campbell",
@@ -41,7 +41,7 @@ export const teams: Team[] = [
         wingspan: "81 in",
         hometown: "Anaheim, CA",
         bio: "Power opposite with a heavy arm and a knack for late-match points.",
-        image: "/players/carl-campbell.png"
+        image: "/players/placeholder.svg"
       },
       {
         slug: "daniel-davis",
@@ -53,7 +53,7 @@ export const teams: Team[] = [
         wingspan: "75 in",
         hometown: "Irvine, CA",
         bio: "Tempo setter who runs a fast offense and reads blocks well.",
-        image: "/players/daniel-davis.png"
+        image: "/players/placeholder.svg"
       },
       {
         slug: "edward-evans",
@@ -93,9 +93,9 @@ export const teams: Team[] = [
       }
     ],
     schedule: [
-      { opponent: "Las Vegas Blaze", date: "2026-04-01" },
-      { opponent: "New York City Cyclones", date: "2026-04-04" },
-      { opponent: "Houston Dragons", date: "2026-04-07" },
+      { opponent: "Las Vegas Blaze", date: "2026-04-01", result: { setsFor: 3, setsAgainst: 1 } },
+      { opponent: "New York City Cyclones", date: "2026-04-04", result: { setsFor: 0, setsAgainst: 3 } },
+      { opponent: "Houston Dragons", date: "2026-04-07", result: { setsFor: 1, setsAgainst: 3 } },
       { opponent: "Las Vegas Blaze", date: "2026-04-10" },
       { opponent: "New York City Cyclones", date: "2026-04-13" },
       { opponent: "Houston Dragons", date: "2026-04-16" },
@@ -197,9 +197,9 @@ export const teams: Team[] = [
       }
     ],
     schedule: [
-      { opponent: "Los Angeles Aces", date: "2026-04-01" },
-      { opponent: "Houston Dragons", date: "2026-04-04" },
-      { opponent: "New York City Cyclones", date: "2026-04-07" },
+      { opponent: "Los Angeles Aces", date: "2026-04-01", result: { setsFor: 1, setsAgainst: 3 } },
+      { opponent: "Houston Dragons", date: "2026-04-04", result: { setsFor: 3, setsAgainst: 2 } },
+      { opponent: "New York City Cyclones", date: "2026-04-07", result: { setsFor: 2, setsAgainst: 3 } },
       { opponent: "Los Angeles Aces", date: "2026-04-10" },
       { opponent: "Houston Dragons", date: "2026-04-13" },
       { opponent: "New York City Cyclones", date: "2026-04-16" },
@@ -301,9 +301,9 @@ export const teams: Team[] = [
       }
     ],
     schedule: [
-      { opponent: "Houston Dragons", date: "2026-04-01" },
-      { opponent: "Los Angeles Aces", date: "2026-04-04" },
-      { opponent: "Las Vegas Blaze", date: "2026-04-07" },
+      { opponent: "Houston Dragons", date: "2026-04-01", result: { setsFor: 2, setsAgainst: 3 } },
+      { opponent: "Los Angeles Aces", date: "2026-04-04", result: { setsFor: 3, setsAgainst: 0 } },
+      { opponent: "Las Vegas Blaze", date: "2026-04-07", result: { setsFor: 3, setsAgainst: 2 } },
       { opponent: "Houston Dragons", date: "2026-04-10" },
       { opponent: "Los Angeles Aces", date: "2026-04-13" },
       { opponent: "Las Vegas Blaze", date: "2026-04-16" },
@@ -405,9 +405,9 @@ export const teams: Team[] = [
       }
     ],
     schedule: [
-      { opponent: "New York City Cyclones", date: "2026-04-01" },
-      { opponent: "Las Vegas Blaze", date: "2026-04-04" },
-      { opponent: "Los Angeles Aces", date: "2026-04-07" },
+      { opponent: "New York City Cyclones", date: "2026-04-01", result: { setsFor: 3, setsAgainst: 2 } },
+      { opponent: "Las Vegas Blaze", date: "2026-04-04", result: { setsFor: 2, setsAgainst: 3 } },
+      { opponent: "Los Angeles Aces", date: "2026-04-07", result: { setsFor: 3, setsAgainst: 1 } },
       { opponent: "New York City Cyclones", date: "2026-04-10" },
       { opponent: "Las Vegas Blaze", date: "2026-04-13" },
       { opponent: "Los Angeles Aces", date: "2026-04-16" },

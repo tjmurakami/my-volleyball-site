@@ -4,6 +4,7 @@ import Link from "next/link";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/teams", label: "Teams" },
+  { href: "/standings", label: "Standings" },
 ];
 
 export default function Navbar() {

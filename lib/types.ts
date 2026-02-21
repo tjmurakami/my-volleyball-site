@@ -14,6 +14,10 @@ export type TeamPlayer = {
 export type TeamGame = {
   opponent: string;
   date: string;
+  result?: {
+    setsFor: number;
+    setsAgainst: number;
+  };
 };
 
 export type Team = {
